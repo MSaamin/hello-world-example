@@ -1,0 +1,12 @@
+name: Print Secret Value
+on:
+  push:
+    branches:
+      - feature/load-secret
+jobs:
+  print-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Secret
+        run: |
+          echo "Secret value is ${{ secrets.MY_SECRET }}"
